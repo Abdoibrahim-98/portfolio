@@ -6,7 +6,7 @@
     background-color: #081b28;
     display: flex; 
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 70px 10%;
     color: #fff;
 }
 
@@ -142,3 +142,348 @@
     box-shadow: 0 0 80px #0ef;
 }
 
+.about{
+    width: 100%;
+    padding: 70px 10% 0;
+    background-color: #081b28;
+    color: #fff;
+}
+.img-custom-1{
+    box-shadow: 0 0 50px #dc0fa9;
+    opacity: 0;
+    transition: 0.3s ease;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    width: 400px;
+    height: 400px;
+}
+.img-custom-1:hover{
+    box-shadow: 0 0 80px #dc0fa9;
+}
+
+.about-text{
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-text h2{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.about-text h2 span {
+     color: #0ef;
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600px;
+    line-height: 1.7;
+}
+.about-text p{
+    font-size: 20px;
+    font-weight: 600px;
+    color: aliceblue;
+    line-height: 1.4;
+}
+
+#services{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.sub-title span{
+    color: #0ef;
+
+}
+
+.services-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.service-item{
+    flex: 1 1 calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 10px 10px 10px;
+    max-width: 300px;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #012290f7,
+                0 0 30px #0053b8f7;
+}
+
+.service-item:hover{
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .service-item {
+      flex: 1 1 calc(50% - 20px); /* 2 items per row for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .service-item {
+      flex: 1 1 100%; /* 1 item per row for the smallest screens */
+    }
+  }
+
+.service-item i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.service-item h2{
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+}
+.service-item p{
+    text-align: center;
+}
+.service-item a{
+    align-self: center;
+}
+
+.skills{
+    padding: 70px 10% !important;
+}
+
+.container1{
+    height: auto;
+   
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar{
+    font-size: 23px;
+    margin: 40px 0;
+}
+
+.bar:first-child{
+    margin-top: 0;
+}
+.bar:last-child{
+    margin-bottom: 0;
+}
+
+.bar .info {
+    margin-bottom: 5px;
+}
+
+.bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform: translateX(0);
+    transform-origin: left;
+}
+
+.progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0,5,1) forwards;
+    transform-origin: left;
+    transform: translateX(0);
+}
+
+@keyframes animate {
+   100%{
+       transform: translateX(1);
+   }
+}
+
+.html span{
+    width: 90%;
+ }
+.css span{
+    width: 65%;
+ }
+.javascript span{
+    width: 85%;
+ }
+.angular span{
+    width: 75%;
+ }
+.react span{
+    width: 50%;
+ }
+
+.progress-line span:after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+ }
+
+.html span:after{
+    content: "90%";
+ }
+.css span:after{
+    content: "65%";
+ }
+.javascript span:after{
+    content: "85%";
+ }
+.angular span:after{
+    content: "75%";
+ }
+.react span:after{
+    content: "50%";
+ }
+
+.progress-line span::before{
+    content: "";
+    background-color: #000;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    top: -10px;
+    right: 0px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+ }
+
+ .radial-bars{
+    width: 100%;
+ }
+
+ .radial-bar{
+    position: relative;
+    height: 170px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .radial-bar svg{
+    transform: rotate(-90deg);
+    height: 120px;
+    width: 160px;
+ }
+
+ .radial-bar .progress-bar{
+    stroke: #000;
+    stroke-width: 10;
+    stop-color: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+ }
+
+ @keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+ }
+
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dashoffset: 502;
+    stroke-dasharray: 502;
+    stroke-linecap: round;
+}
+.path-1{animation: animate-path-1 1s 1s linear forwards;}
+.path-2{animation: animate-path-2 1s 1s linear forwards;}
+.path-3{animation: animate-path-3 1s 1s linear forwards;}
+.path-4{animation: animate-path-4 1s 1s linear forwards;}
+
+.radial-bar .percentage, .radial-bar .text{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.svg-percentage{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.radial-bar .percentage{
+    position: absolute;
+    top: 40%;
+    right: 35%;
+}
+
+@keyframes animate-path-1{
+    100%{
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes animate-path-2{
+    100%{
+        stroke-dashoffset: 175;
+    }
+}
+@keyframes animate-path-3{
+    100%{
+        stroke-dashoffset: 75;
+    }
+}
+@keyframes animate-path-4{
+    100%{
+        stroke-dashoffset: 125;
+    }
+}
+
+ @keyframes showText{
+    100%{
+        opacity: 1;
+    }
+ }

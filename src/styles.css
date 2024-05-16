@@ -10,12 +10,17 @@
 }
 
 body{
-    background-color: #ededed;
+    width: 100%;
+    background-color: #081b28;
+    color: #fff;
 }
+
 
 @font-face {
     font-family: 'Poppins';
-    src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
-}
+    src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
   
   
