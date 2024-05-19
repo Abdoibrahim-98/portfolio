@@ -18,8 +18,12 @@ header{
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
     animation: slideRight 1s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
 }
 
 .navbar a{
@@ -35,7 +39,43 @@ header{
 
 .navbar a:hover{
     color: #0ef;
+    font-weight: bold;
 }
+
+a.active{
+    color: #0ef !important;
+    font-weight: bold !important;
+}
+
+.offcanvas {
+    background-color: #081b28;
+    width: 45%;
+}
+
+.offcanvas-header h5{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+::ng-deep .btn-close{
+    --bs-btn-close-bg: none;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.offcanvas-body nav a{
+    width: 100%;
+   margin-left: 0;
+   margin-bottom: 20px;
+}
+/* .offcanvas-body nav li{
+    font-size: 15px;
+} */
+
 
 @keyframes slideRight {
     0%{

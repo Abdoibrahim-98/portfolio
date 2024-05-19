@@ -1,11 +1,33 @@
 <header class="mb-2">
     <a href="#" class="logo">Portfolio</a>
-    
-    <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skill</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Contact</a>
+    <nav class="navbar d-none d-lg-flex">
+    <a 
+        *ngFor="let section of sections"
+        [href]="section.href"
+        [ngClass]="{ 'active': activeSection === section.href }"
+        (click)="setActiveSection(section.href)"
+    >
+        {{ section.label }}
+    </a>
     </nav>
+    <button class="btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class='bx bx-menu' style='color:#f6f1f1'  ></i></button>
+
+    <div class="offcanvas offcanvas-start d-lg-none" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header d-lg-none">
+        <h5 class="offcanvas-title white text-white d-lg-none" id="offcanvasWithBothOptionsLabel">Portfolio</h5>
+        <button type="button" class="btn-close mx-0" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+    </div>
+    <div class="offcanvas-body">
+        <nav class="navbar flex-column align-items-start px-3">
+            <a 
+              *ngFor="let section of sections"
+              [href]="section.href"
+              [ngClass]="{ 'active': activeSection === section.href }"
+              (click)="setActiveSection(section.href)"
+            >
+              {{ section.label }}
+            </a>
+        </nav>
+    </div>
+    </div>
 </header>
